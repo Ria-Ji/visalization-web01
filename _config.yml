@@ -1,7 +1,7 @@
 title: Lab-Grown Meat Data Analytics
 description: Thank you for visiting our Lab-Grown Meat page. This website provides information about our research on lab-grown meat data visualization, modeling, and analysis.
 sitename: Lab-Grown Meat Data Analytics
-baseurl: '/lab-grown-meat'
+baseurl: '/labgrownmeat-viz'
 
 sass:
   sass_dir: /assets/_sass
@@ -18,5 +18,4 @@ exclude:
   - README.md
   - LICENSE.txt
   - CNAME
-
 
