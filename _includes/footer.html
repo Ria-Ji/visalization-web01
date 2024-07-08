@@ -1,7 +1,7 @@
 <footer>
 	<div class='row'>
 	  <div class='col-lg-12'>
-		<p>Copyright &copy; <a href="#">Lab-Grown Meat Project</a> {{ site.time | date: '%Y' }} - All Rights Reserved</p>
+		<p>Copyright &copy; <a href="{{ site.baseurl }}">Lab-Grown Meat Project</a> {{ site.time | date: '%Y' }} - All Rights Reserved</p>
 	  </div>
 	</div>
   </footer>
@@ -11,9 +11,9 @@
 	var width = $(window).width() - 25; 
   
 	for (i = 0; i < x.length; i++) {
-		console.log(x[i]);
-        x[i].style.width = width;
+	  console.log(x[i]);
+	  x[i].style.width = width;
 	}
-}
-
-</script>
+  }
+  </script>
+  
