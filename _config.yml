@@ -1,5 +1,5 @@
 title: Lab-Grown Meat Data Analytics
-description: Thank you for visiting our Lab-Grown Meat page. This website provides information about our research on lab-grown meat data visualization, modeling, and analysis.
+description: Thank you for visiting our Lab-Grown Meat page. This website provides information about our research on lab-grown meat data visualization, statistical modeling, and policies.
 sitename: Lab-Grown Meat Data Analytics
 baseurl: '/labgrownmeat-viz'
 
@@ -11,6 +11,13 @@ collections:
   features:
     output: true
     permalink: /feature/:path/
+
+models:
+    output: true
+    permalink: /models/
+policies:
+    output: true
+    permalink: /policies/
 
 exclude:
   - Gemfile
