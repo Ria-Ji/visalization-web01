@@ -1,0 +1,2952 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+    
+</head>
+<body >
+            <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: block;
+        }
+
+        .chart-container:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'da6bb91cf5ec4f97b5322473c87196bf')">1970</button>
+            <button class="tablinks" onclick="showChart(event, '7d7ddf183c4246968ef83e2f7e5a1e0b')">2013</button>
+            <button class="tablinks" onclick="showChart(event, '4a741b9b25bc42239523424bf2ceaf17')">2017</button>
+            <button class="tablinks" onclick="showChart(event, 'b585bff2dcd145ee9c9668c7c49f319d')">2018</button>
+            <button class="tablinks" onclick="showChart(event, 'c654bc3008dd4c9f879623aa095d7f2d')">2019</button>
+            <button class="tablinks" onclick="showChart(event, '12429a3464c54f7d94992cbc9b9eb015')">2020</button>
+            <button class="tablinks" onclick="showChart(event, 'cbacb3c7b3b14eaaab16c6ac4f46e202')">2021</button>
+            <button class="tablinks" onclick="showChart(event, 'b9b257d654ae49a8b58987412898d9aa')">2022</button>
+            <button class="tablinks" onclick="showChart(event, '9504edcc3691401a8ecd2e9c8d780c02')">2023</button>
+            <button class="tablinks" onclick="showChart(event, '1f390100bc15493b972a93300e0d491c')">2024</button>
+    </div>
+
+    <div class="box">
+                <div id="da6bb91cf5ec4f97b5322473c87196bf" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('da6bb91cf5ec4f97b5322473c87196bf').style.width = document.getElementById('da6bb91cf5ec4f97b5322473c87196bf').parentNode.clientWidth + 'px';
+        var chart_da6bb91cf5ec4f97b5322473c87196bf = echarts.init(
+            document.getElementById('da6bb91cf5ec4f97b5322473c87196bf'), 'white', {renderer: 'canvas'});
+        var option_da6bb91cf5ec4f97b5322473c87196bf = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "1970-01-01",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "1970-01-01",
+            "1970-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 1970",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_da6bb91cf5ec4f97b5322473c87196bf.setOption(option_da6bb91cf5ec4f97b5322473c87196bf);
+    </script>
+                <div id="7d7ddf183c4246968ef83e2f7e5a1e0b" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('7d7ddf183c4246968ef83e2f7e5a1e0b').style.width = document.getElementById('7d7ddf183c4246968ef83e2f7e5a1e0b').parentNode.clientWidth + 'px';
+        var chart_7d7ddf183c4246968ef83e2f7e5a1e0b = echarts.init(
+            document.getElementById('7d7ddf183c4246968ef83e2f7e5a1e0b'), 'white', {renderer: 'canvas'});
+        var option_7d7ddf183c4246968ef83e2f7e5a1e0b = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2013-11-07",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2013-01-01",
+            "2013-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2013",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_7d7ddf183c4246968ef83e2f7e5a1e0b.setOption(option_7d7ddf183c4246968ef83e2f7e5a1e0b);
+    </script>
+                <div id="4a741b9b25bc42239523424bf2ceaf17" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('4a741b9b25bc42239523424bf2ceaf17').style.width = document.getElementById('4a741b9b25bc42239523424bf2ceaf17').parentNode.clientWidth + 'px';
+        var chart_4a741b9b25bc42239523424bf2ceaf17 = echarts.init(
+            document.getElementById('4a741b9b25bc42239523424bf2ceaf17'), 'white', {renderer: 'canvas'});
+        var option_4a741b9b25bc42239523424bf2ceaf17 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2017-04-13",
+                    1
+                ],
+                [
+                    "2017-09-16",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2017-01-01",
+            "2017-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2017",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_4a741b9b25bc42239523424bf2ceaf17.setOption(option_4a741b9b25bc42239523424bf2ceaf17);
+    </script>
+                <div id="b585bff2dcd145ee9c9668c7c49f319d" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('b585bff2dcd145ee9c9668c7c49f319d').style.width = document.getElementById('b585bff2dcd145ee9c9668c7c49f319d').parentNode.clientWidth + 'px';
+        var chart_b585bff2dcd145ee9c9668c7c49f319d = echarts.init(
+            document.getElementById('b585bff2dcd145ee9c9668c7c49f319d'), 'white', {renderer: 'canvas'});
+        var option_b585bff2dcd145ee9c9668c7c49f319d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2018-05-15",
+                    1
+                ],
+                [
+                    "2018-06-15",
+                    1
+                ],
+                [
+                    "2018-06-18",
+                    1
+                ],
+                [
+                    "2018-08-23",
+                    1
+                ],
+                [
+                    "2018-08-27",
+                    1
+                ],
+                [
+                    "2018-08-28",
+                    1
+                ],
+                [
+                    "2018-09-02",
+                    1
+                ],
+                [
+                    "2018-09-13",
+                    2
+                ],
+                [
+                    "2018-10-22",
+                    1
+                ],
+                [
+                    "2018-10-23",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2018-01-01",
+            "2018-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2018",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_b585bff2dcd145ee9c9668c7c49f319d.setOption(option_b585bff2dcd145ee9c9668c7c49f319d);
+    </script>
+                <div id="c654bc3008dd4c9f879623aa095d7f2d" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('c654bc3008dd4c9f879623aa095d7f2d').style.width = document.getElementById('c654bc3008dd4c9f879623aa095d7f2d').parentNode.clientWidth + 'px';
+        var chart_c654bc3008dd4c9f879623aa095d7f2d = echarts.init(
+            document.getElementById('c654bc3008dd4c9f879623aa095d7f2d'), 'white', {renderer: 'canvas'});
+        var option_c654bc3008dd4c9f879623aa095d7f2d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2019-01-01",
+                    1
+                ],
+                [
+                    "2019-01-03",
+                    1
+                ],
+                [
+                    "2019-01-09",
+                    1
+                ],
+                [
+                    "2019-01-14",
+                    1
+                ],
+                [
+                    "2019-01-24",
+                    2
+                ],
+                [
+                    "2019-01-30",
+                    1
+                ],
+                [
+                    "2019-02-13",
+                    1
+                ],
+                [
+                    "2019-02-14",
+                    1
+                ],
+                [
+                    "2019-02-24",
+                    1
+                ],
+                [
+                    "2019-02-26",
+                    1
+                ],
+                [
+                    "2019-03-01",
+                    1
+                ],
+                [
+                    "2019-03-07",
+                    1
+                ],
+                [
+                    "2019-03-11",
+                    1
+                ],
+                [
+                    "2019-03-13",
+                    1
+                ],
+                [
+                    "2019-03-18",
+                    1
+                ],
+                [
+                    "2019-03-21",
+                    1
+                ],
+                [
+                    "2019-03-27",
+                    1
+                ],
+                [
+                    "2019-04-04",
+                    1
+                ],
+                [
+                    "2019-04-19",
+                    2
+                ],
+                [
+                    "2019-05-29",
+                    1
+                ],
+                [
+                    "2019-07-01",
+                    2
+                ],
+                [
+                    "2019-09-08",
+                    1
+                ],
+                [
+                    "2019-09-10",
+                    1
+                ],
+                [
+                    "2019-09-11",
+                    1
+                ],
+                [
+                    "2019-09-27",
+                    1
+                ],
+                [
+                    "2019-11-07",
+                    1
+                ],
+                [
+                    "2019-12-03",
+                    1
+                ],
+                [
+                    "2019-12-16",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2019-01-01",
+            "2019-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2019",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_c654bc3008dd4c9f879623aa095d7f2d.setOption(option_c654bc3008dd4c9f879623aa095d7f2d);
+    </script>
+                <div id="12429a3464c54f7d94992cbc9b9eb015" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('12429a3464c54f7d94992cbc9b9eb015').style.width = document.getElementById('12429a3464c54f7d94992cbc9b9eb015').parentNode.clientWidth + 'px';
+        var chart_12429a3464c54f7d94992cbc9b9eb015 = echarts.init(
+            document.getElementById('12429a3464c54f7d94992cbc9b9eb015'), 'white', {renderer: 'canvas'});
+        var option_12429a3464c54f7d94992cbc9b9eb015 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2020-01-01",
+                    1
+                ],
+                [
+                    "2020-01-07",
+                    1
+                ],
+                [
+                    "2020-01-13",
+                    1
+                ],
+                [
+                    "2020-01-15",
+                    2
+                ],
+                [
+                    "2020-01-19",
+                    1
+                ],
+                [
+                    "2020-06-09",
+                    1
+                ],
+                [
+                    "2020-07-01",
+                    1
+                ],
+                [
+                    "2020-07-04",
+                    1
+                ],
+                [
+                    "2020-07-27",
+                    1
+                ],
+                [
+                    "2020-09-16",
+                    1
+                ],
+                [
+                    "2020-10-07",
+                    1
+                ],
+                [
+                    "2020-11-03",
+                    1
+                ],
+                [
+                    "2020-11-19",
+                    1
+                ],
+                [
+                    "2020-11-23",
+                    1
+                ],
+                [
+                    "2020-12-01",
+                    2
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2020-01-01",
+            "2020-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2020",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_12429a3464c54f7d94992cbc9b9eb015.setOption(option_12429a3464c54f7d94992cbc9b9eb015);
+    </script>
+                <div id="cbacb3c7b3b14eaaab16c6ac4f46e202" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('cbacb3c7b3b14eaaab16c6ac4f46e202').style.width = document.getElementById('cbacb3c7b3b14eaaab16c6ac4f46e202').parentNode.clientWidth + 'px';
+        var chart_cbacb3c7b3b14eaaab16c6ac4f46e202 = echarts.init(
+            document.getElementById('cbacb3c7b3b14eaaab16c6ac4f46e202'), 'white', {renderer: 'canvas'});
+        var option_cbacb3c7b3b14eaaab16c6ac4f46e202 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2021-01-10",
+                    1
+                ],
+                [
+                    "2021-02-04",
+                    1
+                ],
+                [
+                    "2021-02-12",
+                    1
+                ],
+                [
+                    "2021-03-18",
+                    1
+                ],
+                [
+                    "2021-05-03",
+                    1
+                ],
+                [
+                    "2021-07-23",
+                    1
+                ],
+                [
+                    "2021-09-01",
+                    1
+                ],
+                [
+                    "2021-09-03",
+                    1
+                ],
+                [
+                    "2021-09-15",
+                    1
+                ],
+                [
+                    "2021-10-29",
+                    1
+                ],
+                [
+                    "2021-11-22",
+                    1
+                ],
+                [
+                    "2021-11-26",
+                    1
+                ],
+                [
+                    "2021-12-13",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2021-01-01",
+            "2021-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2021",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_cbacb3c7b3b14eaaab16c6ac4f46e202.setOption(option_cbacb3c7b3b14eaaab16c6ac4f46e202);
+    </script>
+                <div id="b9b257d654ae49a8b58987412898d9aa" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('b9b257d654ae49a8b58987412898d9aa').style.width = document.getElementById('b9b257d654ae49a8b58987412898d9aa').parentNode.clientWidth + 'px';
+        var chart_b9b257d654ae49a8b58987412898d9aa = echarts.init(
+            document.getElementById('b9b257d654ae49a8b58987412898d9aa'), 'white', {renderer: 'canvas'});
+        var option_b9b257d654ae49a8b58987412898d9aa = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2022-02-01",
+                    1
+                ],
+                [
+                    "2022-03-08",
+                    1
+                ],
+                [
+                    "2022-03-15",
+                    1
+                ],
+                [
+                    "2022-04-18",
+                    1
+                ],
+                [
+                    "2022-04-19",
+                    2
+                ],
+                [
+                    "2022-05-17",
+                    1
+                ],
+                [
+                    "2022-05-18",
+                    3
+                ],
+                [
+                    "2022-05-20",
+                    1
+                ],
+                [
+                    "2022-06-01",
+                    1
+                ],
+                [
+                    "2022-06-08",
+                    1
+                ],
+                [
+                    "2022-06-15",
+                    1
+                ],
+                [
+                    "2022-06-16",
+                    1
+                ],
+                [
+                    "2022-06-23",
+                    1
+                ],
+                [
+                    "2022-06-30",
+                    1
+                ],
+                [
+                    "2022-08-05",
+                    2
+                ],
+                [
+                    "2022-09-07",
+                    1
+                ],
+                [
+                    "2022-09-22",
+                    1
+                ],
+                [
+                    "2022-09-26",
+                    1
+                ],
+                [
+                    "2022-10-10",
+                    1
+                ],
+                [
+                    "2022-10-19",
+                    1
+                ],
+                [
+                    "2022-10-27",
+                    1
+                ],
+                [
+                    "2022-10-28",
+                    1
+                ],
+                [
+                    "2022-10-31",
+                    1
+                ],
+                [
+                    "2022-11-16",
+                    2
+                ],
+                [
+                    "2022-11-25",
+                    1
+                ],
+                [
+                    "2022-12-08",
+                    1
+                ],
+                [
+                    "2022-12-09",
+                    2
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2022-01-01",
+            "2022-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2022",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_b9b257d654ae49a8b58987412898d9aa.setOption(option_b9b257d654ae49a8b58987412898d9aa);
+    </script>
+                <div id="9504edcc3691401a8ecd2e9c8d780c02" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('9504edcc3691401a8ecd2e9c8d780c02').style.width = document.getElementById('9504edcc3691401a8ecd2e9c8d780c02').parentNode.clientWidth + 'px';
+        var chart_9504edcc3691401a8ecd2e9c8d780c02 = echarts.init(
+            document.getElementById('9504edcc3691401a8ecd2e9c8d780c02'), 'white', {renderer: 'canvas'});
+        var option_9504edcc3691401a8ecd2e9c8d780c02 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2023-01-01",
+                    1
+                ],
+                [
+                    "2023-01-09",
+                    1
+                ],
+                [
+                    "2023-01-18",
+                    3
+                ],
+                [
+                    "2023-01-19",
+                    1
+                ],
+                [
+                    "2023-01-30",
+                    1
+                ],
+                [
+                    "2023-02-02",
+                    1
+                ],
+                [
+                    "2023-02-22",
+                    1
+                ],
+                [
+                    "2023-02-27",
+                    1
+                ],
+                [
+                    "2023-02-28",
+                    1
+                ],
+                [
+                    "2023-03-28",
+                    1
+                ],
+                [
+                    "2023-03-29",
+                    1
+                ],
+                [
+                    "2023-03-31",
+                    1
+                ],
+                [
+                    "2023-04-12",
+                    1
+                ],
+                [
+                    "2023-04-27",
+                    1
+                ],
+                [
+                    "2023-05-02",
+                    1
+                ],
+                [
+                    "2023-05-15",
+                    1
+                ],
+                [
+                    "2023-05-25",
+                    1
+                ],
+                [
+                    "2023-06-09",
+                    1
+                ],
+                [
+                    "2023-06-14",
+                    1
+                ],
+                [
+                    "2023-06-21",
+                    2
+                ],
+                [
+                    "2023-06-29",
+                    1
+                ],
+                [
+                    "2023-07-05",
+                    1
+                ],
+                [
+                    "2023-07-20",
+                    1
+                ],
+                [
+                    "2023-08-01",
+                    1
+                ],
+                [
+                    "2023-08-04",
+                    1
+                ],
+                [
+                    "2023-08-31",
+                    1
+                ],
+                [
+                    "2023-09-13",
+                    1
+                ],
+                [
+                    "2023-09-29",
+                    2
+                ],
+                [
+                    "2023-10-31",
+                    1
+                ],
+                [
+                    "2023-11-05",
+                    1
+                ],
+                [
+                    "2023-11-15",
+                    1
+                ],
+                [
+                    "2023-11-16",
+                    1
+                ],
+                [
+                    "2023-11-20",
+                    1
+                ],
+                [
+                    "2023-12-11",
+                    1
+                ],
+                [
+                    "2023-12-19",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2023-01-01",
+            "2023-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2023",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_9504edcc3691401a8ecd2e9c8d780c02.setOption(option_9504edcc3691401a8ecd2e9c8d780c02);
+    </script>
+                <div id="1f390100bc15493b972a93300e0d491c" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('1f390100bc15493b972a93300e0d491c').style.width = document.getElementById('1f390100bc15493b972a93300e0d491c').parentNode.clientWidth + 'px';
+        var chart_1f390100bc15493b972a93300e0d491c = echarts.init(
+            document.getElementById('1f390100bc15493b972a93300e0d491c'), 'white', {renderer: 'canvas'});
+        var option_1f390100bc15493b972a93300e0d491c = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "heatmap",
+            "coordinateSystem": "calendar",
+            "data": [
+                [
+                    "2024-01-03",
+                    2
+                ],
+                [
+                    "2024-01-23",
+                    4
+                ],
+                [
+                    "2024-02-03",
+                    1
+                ],
+                [
+                    "2024-02-24",
+                    1
+                ],
+                [
+                    "2024-04-03",
+                    1
+                ],
+                [
+                    "2024-05-02",
+                    2
+                ],
+                [
+                    "2024-05-06",
+                    1
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "inside",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "calendar": {
+        "zlevel": 0,
+        "z": 2,
+        "left": "30",
+        "top": "120",
+        "right": "30",
+        "width": "auto",
+        "orient": "horizontal",
+        "range": [
+            "2024-01-01",
+            "2024-12-31"
+        ],
+        "cellSize": 20,
+        "dayLabel": {
+            "show": true,
+            "firstDay": 0,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "monthLabel": {
+            "show": true,
+            "margin": 5,
+            "position": "start",
+            "nameMap": "en",
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "yearLabel": {
+            "show": false,
+            "color": "#000",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "fontFamily": "sans-serif",
+            "fontSize": 12
+        },
+        "silent": false
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Events Calendar 2024",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": null,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "horizontal",
+        "left": "center",
+        "top": "top",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 14,
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 0,
+                "max": 0,
+                "label": "0 events",
+                "color": "#ffffff"
+            },
+            {
+                "min": 1,
+                "max": 1,
+                "label": "1 event",
+                "color": "#ffffe0"
+            },
+            {
+                "min": 2,
+                "max": 2,
+                "label": "2 events",
+                "color": "#ffe0b2"
+            },
+            {
+                "min": 3,
+                "max": 3,
+                "label": "3 events",
+                "color": "#ffb2b2"
+            },
+            {
+                "min": 4,
+                "max": 4,
+                "label": "4 events",
+                "color": "#ff9999"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "5 events",
+                "color": "#ff7f7f"
+            },
+            {
+                "min": 6,
+                "max": 6,
+                "label": "6 events",
+                "color": "#ff6666"
+            },
+            {
+                "min": 7,
+                "max": 7,
+                "label": "7 events",
+                "color": "#ff4c4c"
+            },
+            {
+                "min": 8,
+                "label": "8+ events",
+                "color": "#ff1919"
+            }
+        ]
+    }
+};
+        chart_1f390100bc15493b972a93300e0d491c.setOption(option_1f390100bc15493b972a93300e0d491c);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

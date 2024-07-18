@@ -17,14 +17,32 @@ heading: Lab-Grown Meat Data Visualization
       {% include charts/cumulative_articles_line_chart.html %}
     </div>
     <div class='col-lg-6 col-sm-12'>  
+      {% include charts/media_articles_over_time_by_month.html %}
+    </div>
+    <div class='col-lg-6 col-sm-12'>  
+      {% include charts/media_articles_distribution_by_country.html %}
+    </div>
+    <div class='col-lg-6 col-sm-12'>  
       {% include charts/articles_heatmap.html %}
-    </div>         
+    </div>  
+    <div class='col-lg-6 col-sm-12'>  
+      {% include charts/world_media_data_heatmap.html %}
+    </div>   
+    <div class='col-lg-6 col-sm-12'>  
+      {% include charts/99media_articles_calendar_2023.html %}
+    </div>       
   </div>
   <hr>
   <h2>Regulatory Event Data Visualization</h2>
   <div class='row'>
     <div class='col-lg-6 col-sm-12'>
       {% include charts/regulatory_events_us.html %}
+    </div>
+    <div class='col-lg-6 col-sm-12'>
+      {% include charts/regulatory_events_by_year_country.html %}
+    </div>
+    <div class='col-lg-6 col-sm-12'>
+      {% include charts/total_events_rose_plot.html %}
     </div>
   </div>
   <hr>
