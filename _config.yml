@@ -1,7 +1,7 @@
 title: Breakthrough Innovations Project Data Analytics
 description: Thank you for visiting our Innovations Project page. This website provides information about our research on data visualization, statistical modeling, and policies.
 sitename: Breakthrough Innovations Project Data Analytics
-baseurl: '/labgrownmeat-viz'
+baseurl: '/visalization-web01'
 
 sass:
   sass_dir: /assets/_sass
